@@ -2,17 +2,30 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import NFTCard from './pages/NFTcard'
+import Calculator from './pages/Calculator'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className='App'>
-      <Navbar />
-      <div className='content'>
-        <Home />
+    <Router>
+      <div className='App'>
+        <div className='content'>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/2nd project">
+              <NFTCard />
+            </Route>
+            <Route path="/calculator">
+              <Calculator />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   )
 }
 
