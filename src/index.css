@@ -3,7 +3,7 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+
 }
 
 .navbar {
@@ -37,4 +37,20 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+
+.navbar-content {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  justify-content: center; /* Rozloží odkazy rovnoměrně */
+  
+}
+
+
+.navbar-content a {
+  margin: 0 15px; /* Vytvoří mezeru mezi odkazy */
 }

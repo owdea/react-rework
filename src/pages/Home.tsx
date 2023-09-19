@@ -1,14 +1,12 @@
+import { useState } from "react";
+
 function Home() {
+    const [color, changeColor] = useState("#12afed") // style={{background: color}}
     return (
-        <div className="home">
-            <nav className="navbar">
+        
+        <div className="home"> 
                 <h1>Mé portfolium</h1>
-                <div className="links">
-                    <a href="/">Home</a>
-                    <a href="/2nd project">2nd project</a>
-                    <a href="/calculator">Calculator</a>
-                </div>
-            </nav>
+                
             <h2>Homepage</h2>
         </div>
     );
