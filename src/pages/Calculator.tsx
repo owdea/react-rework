@@ -15,16 +15,14 @@ const [numberOfPeople, setNumberOfPeople] = useState(0);
 
 
 const onBillChangeHandler = event => {
-    setBill(event.target.value)
-    console.log(bill)
+    setBill(event.target.valueAsNumber)
 }
 
 const onPeopleChangeHandler = event => {
-    setNumberOfPeople(event.target.value)
-    console.log(numberOfPeople)
+    setNumberOfPeople(event.target.valueAsNumber)
 }
 
-let sum = bill + numberOfPeople
+let tipPerPerson = (bill / numberOfPeople) * percent
 
     return (
     <body>
@@ -32,7 +30,7 @@ let sum = bill + numberOfPeople
     <h2>{percent}</h2>
     <h2>{bill}</h2>
     <h2>{numberOfPeople}</h2>
-    <h2>{sum}</h2>
+    <h2>{tipPerPerson}</h2>
 
     <main>
 
@@ -55,11 +53,11 @@ let sum = bill + numberOfPeople
         <div id="main-left-middle">
             <p>Select Tip %</p>
             <div className="percentage-choice">
-                <Button text="5%" class="button" onClick={() => setPercent(5)}></Button>
-                <Button text="10%" class="button" onClick={() => setPercent(10)}></Button>
-                <Button text="15%" class="button" onClick={() => setPercent(15)}></Button>
-                <Button text="25%" class="button" onClick={() => setPercent(25)}></Button>
-                <Button text="50%" class="button" onClick={() => setPercent(50)}></Button>
+                <Button text="5%" class="button" onClick={() => setPercent(0.05)}></Button>
+                <Button text="10%" class="button" onClick={() => setPercent(0.1)}></Button>
+                <Button text="15%" class="button" onClick={() => setPercent(0.15)}></Button>
+                <Button text="25%" class="button" onClick={() => setPercent(0.25)}></Button>
+                <Button text="50%" class="button" onClick={() => setPercent(0.50)}></Button>
               <Input class="input custom" type="number" placeholder="Custom"/>
             </div>
         </div>
