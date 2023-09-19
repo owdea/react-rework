@@ -9,20 +9,25 @@ import { useState } from "react";
 
 function Calculator() {
 const [percent, setPercent] = useState(0);
-const [bill, setBill] = useState(22);
-const [numberOfPeople, setNumberOfPeople] = useState(22);
+const [bill, setBill] = useState(0);
+const [numberOfPeople, setNumberOfPeople] = useState(0);
+const [finalTip, setFinalTip] = useState(0);
+
+const calculateTip = () => {
+    setFinalTip(bill + numberOfPeople)
+}
 
 const onBillChangeHandler = event => {
     setBill(event.target.value)
     console.log(bill)
+    calculateTip()
 }
 
 const onPeopleChangeHandler = event => {
     setNumberOfPeople(event.target.value)
     console.log(numberOfPeople)
+    calculateTip()
 }
-
-let tip: number = numberOfPeople + bill
 
 console.log(percent)
 
@@ -32,7 +37,7 @@ console.log(percent)
     <h2>{percent}</h2>
     <h2>{bill}</h2>
     <h2>{numberOfPeople}</h2>
-    <h2>{tip}</h2>
+    <h2>{finalTip}</h2>
 
     <main>
 
@@ -42,7 +47,7 @@ console.log(percent)
           <div id="bill">
             <img src={Dollar} alt="icon dollar"/>
             <Input 
-                className="input"
+                class="input"
                 type="number" 
                 name="bill" 
                 placeholder="0" 
@@ -60,7 +65,7 @@ console.log(percent)
                 <Button text="15%" class="button" onClick={() => setPercent(15)}></Button>
                 <Button text="25%" class="button" onClick={() => setPercent(25)}></Button>
                 <Button text="50%" class="button" onClick={() => setPercent(50)}></Button>
-              <Input className="input custom" type="number" placeholder="Custom"/>
+              <Input class="input custom" type="number" placeholder="Custom"/>
             </div>
         </div>
         <div id="main-left-bottom">
@@ -70,7 +75,13 @@ console.log(percent)
           </div>
           <div id="number-people">
             <img src={People} alt="icon person"/>
-            <Input className="input" type="number" name="" placeholder="0" onChange={(onPeopleChangeHandler)}/>
+            <Input 
+                class="input"
+                type="number" 
+                name="" 
+                placeholder="0" 
+                onChange={onPeopleChangeHandler}
+                />
           </div> 
         </div>
       </div>
@@ -97,7 +108,7 @@ console.log(percent)
           </div>
         </div>
         <button id="button-reset" disabled>Reset</button>
-        <Button id="button-reset" text="Reset" state="disabled"/>
+        <Button id="button-reset" text="Reset"/>
       </div>
     </main>
 

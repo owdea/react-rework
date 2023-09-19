@@ -1,4 +1,12 @@
-function Input(props) {
+interface InputProps {
+    class: string,
+    type: string,
+    name?: string,
+    placeholder: string,
+    onChange?: React.ChangeEventHandler<HTMLInputElement>
+}
+
+function Input(props: InputProps) {
     return (
         <input 
             className={props.class} 
