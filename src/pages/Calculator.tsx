@@ -11,25 +11,20 @@ function Calculator() {
 const [percent, setPercent] = useState(0);
 const [bill, setBill] = useState(0);
 const [numberOfPeople, setNumberOfPeople] = useState(0);
-const [finalTip, setFinalTip] = useState(0);
 
-const calculateTip = () => {
-    setFinalTip(bill + numberOfPeople)
-}
+
 
 const onBillChangeHandler = event => {
     setBill(event.target.value)
     console.log(bill)
-    calculateTip()
 }
 
 const onPeopleChangeHandler = event => {
     setNumberOfPeople(event.target.value)
     console.log(numberOfPeople)
-    calculateTip()
 }
 
-console.log(percent)
+let sum = bill + numberOfPeople
 
     return (
     <body>
@@ -37,7 +32,7 @@ console.log(percent)
     <h2>{percent}</h2>
     <h2>{bill}</h2>
     <h2>{numberOfPeople}</h2>
-    <h2>{finalTip}</h2>
+    <h2>{sum}</h2>
 
     <main>
 
