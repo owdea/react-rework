@@ -4,13 +4,14 @@ interface ButtonProps {
     class?: string,
     id?: string,
     onClick?: () => void,
-    text: string
+    text: string,
+    disabled: boolean
 }
 
 function Button (props: ButtonProps) {
     
     return (
-        <button className={props.class} id={props.id} onClick={props.onClick}>{props.text}</button>
+        <button className={props.class} id={props.id} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>
     )
 }
 

@@ -11,26 +11,53 @@ function Calculator() {
 const [percent, setPercent] = useState(0);
 const [bill, setBill] = useState(0);
 const [numberOfPeople, setNumberOfPeople] = useState(0);
+const [customInput, setCustomInput] = useState("Custom")
 
 
 
-const onBillChangeHandler = event => {
+const onBillChangeHandler = event => { //zajištění změny hodnoty bill po inputu
     setBill(event.target.valueAsNumber)
 }
 
-const onPeopleChangeHandler = event => {
+const onPeopleChangeHandler = event => { //zajištění změny hodnoty numberOfPeople po inputu
     setNumberOfPeople(event.target.valueAsNumber)
 }
 
-let tipPerPerson = (bill / numberOfPeople) * percent
+let tipPerPerson
+let totalPerPerson
+if(customInput !== "Custom"){
+    tipPerPerson = Number(((bill / numberOfPeople) * percent).toFixed(2)) //výpočet samotného dýška na osobu
+    totalPerPerson = Number(((bill/numberOfPeople) + tipPerPerson).toFixed(2)) //výpočet platby jednoho člověka (včetně dýška)
+} else {
+    tipPerPerson
+    totalPerPerson
+}
+if (Number.isNaN(tipPerPerson)|| numberOfPeople === 0) {
+    tipPerPerson = 0
+}
+if (Number.isNaN(totalPerPerson) || numberOfPeople === 0) {
+    totalPerPerson = 0
+}
+
+if(Number.isNaN(customInput)) {
+    setCustomInput("Custom");
+}
+
+const resetValues = () => { //funkce pro reset button
+    setPercent(0);
+    setBill(0);
+    setNumberOfPeople(0);
+    setCustomInput("Custom")
+}
+
+const customTipChangeHandler = event => {
+    setCustomInput(event.target.valueAsNumber)
+}
 
     return (
     <body>
     <h2>spli<span>tter</span></h2>
-    <h2>{percent}</h2>
-    <h2>{bill}</h2>
-    <h2>{numberOfPeople}</h2>
-    <h2>{tipPerPerson}</h2>
+    <h2>{customInput}</h2>
 
     <main>
 
@@ -44,6 +71,7 @@ let tipPerPerson = (bill / numberOfPeople) * percent
                 type="number" 
                 name="bill" 
                 placeholder="0" 
+                value={bill}
                 onChange={onBillChangeHandler}
                 />
             
@@ -53,12 +81,12 @@ let tipPerPerson = (bill / numberOfPeople) * percent
         <div id="main-left-middle">
             <p>Select Tip %</p>
             <div className="percentage-choice">
-                <Button text="5%" class="button" onClick={() => setPercent(0.05)}></Button>
-                <Button text="10%" class="button" onClick={() => setPercent(0.1)}></Button>
-                <Button text="15%" class="button" onClick={() => setPercent(0.15)}></Button>
-                <Button text="25%" class="button" onClick={() => setPercent(0.25)}></Button>
-                <Button text="50%" class="button" onClick={() => setPercent(0.50)}></Button>
-              <Input class="input custom" type="number" placeholder="Custom"/>
+                <Button text="5%" class="button" onClick={() => setPercent(0.05)} disabled={false}></Button>
+                <Button text="10%" class="button" onClick={() => setPercent(0.1)} disabled={false}></Button>
+                <Button text="15%" class="button" onClick={() => setPercent(0.15)} disabled={false}></Button>
+                <Button text="25%" class="button" onClick={() => setPercent(0.25)} disabled={false}></Button>
+                <Button text="50%" class="button" onClick={() => setPercent(0.50)} disabled={false}></Button>
+              <Input value={customInput} class="input custom" type="number" placeholder="Custom" onChange={customTipChangeHandler}/>
             </div>
         </div>
         <div id="main-left-bottom">
@@ -73,6 +101,7 @@ let tipPerPerson = (bill / numberOfPeople) * percent
                 type="number" 
                 name="" 
                 placeholder="0" 
+                value={numberOfPeople}
                 onChange={onPeopleChangeHandler}
                 />
           </div> 
@@ -87,7 +116,7 @@ let tipPerPerson = (bill / numberOfPeople) * percent
           </div>
           <div className="tip-total">
             <div className="dollar"></div>
-           <span>$</span><span id="result-tip">0.00</span>
+           <span>$</span><span id="result-tip">{tipPerPerson}</span>
           </div>
         </div>
         <div id="main-right-middle">
@@ -97,11 +126,10 @@ let tipPerPerson = (bill / numberOfPeople) * percent
           </div>
           <div className="tip-total">
             <div className="dollar"></div>
-            <span>$</span><span id="result-total">0.00</span>
+            <span>$</span><span id="result-total">{totalPerPerson}</span>
           </div>
         </div>
-        <button id="button-reset" disabled>Reset</button>
-        <Button id="button-reset" text="Reset"/>
+        <Button id="button-reset" text="Reset" disabled={false} onClick={resetValues}/>
       </div>
     </main>
 
