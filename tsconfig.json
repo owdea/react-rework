@@ -23,6 +23,9 @@
     "noImplicitAny": false
 
   },
+  "formatOptions": {
+    "insertSpaceAfterCommaDelimiter": true,
+  },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
