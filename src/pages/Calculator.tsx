@@ -25,12 +25,12 @@ const onPeopleChangeHandler = event => { //zajištění změny hodnoty numberOfP
 
 let tipPerPerson
 let totalPerPerson
-if(customInput !== "Custom"){
+if(customInput === "Custom"){
     tipPerPerson = Number(((bill / numberOfPeople) * percent).toFixed(2)) //výpočet samotného dýška na osobu
     totalPerPerson = Number(((bill/numberOfPeople) + tipPerPerson).toFixed(2)) //výpočet platby jednoho člověka (včetně dýška)
 } else {
-    tipPerPerson
-    totalPerPerson
+    tipPerPerson = Number(((bill / numberOfPeople) * parseInt(customInput) * 0.01).toFixed(2))
+    totalPerPerson = Number(((bill/numberOfPeople) + tipPerPerson).toFixed(2))
 }
 if (Number.isNaN(tipPerPerson)|| numberOfPeople === 0) {
     tipPerPerson = 0
@@ -57,7 +57,6 @@ const customTipChangeHandler = event => {
     return (
     <body>
     <h2>spli<span>tter</span></h2>
-    <h2>{customInput}</h2>
 
     <main>
 
