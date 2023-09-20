@@ -98,36 +98,7 @@ function Calculator() {
                     <div id="main-left-middle">
                         <p>Select Tip %</p>
                         <div className="percentage-choice">
-                            <Button
-                                text="5%"
-                                class="button"
-                                onClick={() => setPercent(0.05)}
-                                disabled={false}
-                            ></Button>
-                            <Button
-                                text="10%"
-                                class="button"
-                                onClick={() => setPercent(0.1)}
-                                disabled={false}
-                            ></Button>
-                            <Button
-                                text="15%"
-                                class="button"
-                                onClick={() => setPercent(0.15)}
-                                disabled={false}
-                            ></Button>
-                            <Button
-                                text="25%"
-                                class="button"
-                                onClick={() => setPercent(0.25)}
-                                disabled={false}
-                            ></Button>
-                            <Button
-                                text="50%"
-                                class="button"
-                                onClick={() => setPercent(0.5)}
-                                disabled={false}
-                            ></Button>
+                            {buttons}
                             <Input
                                 value={customInput}
                                 class="input custom"
