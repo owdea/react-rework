@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-* {
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,8 +16,8 @@
     text-align: left;
 }
 
-body {
-    background-color: var(--bg-main);
+.nft .nft__body {
+    /*background-color: var(--bg-main);*/
     font-family: "Outfit", sans-serif;
     color: var(--colour-blue);
     font-weight: 300;

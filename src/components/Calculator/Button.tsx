@@ -1,18 +1,16 @@
-import "../../styles/Calculator.css";
-
-interface ButtonProps {
-    class?: string,
-    id?: string,
-    onClick?: () => void,
-    text: string,
-    disabled: boolean
-}
-
-function Button (props: ButtonProps) {
+import { ButtonHTMLAttributes, InputHTMLAttributes } from "react";
     
-    return (
-        <button className={props.class} id={props.id} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>
-    )
-}
 
-export default Button
+type Props = {
+    selected?: boolean;
+    isCalculator?: boolean;
+    isHomePage?: boolean;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const CalculatorButton = ({selected, ...props}: Props) => <button className={`calculator__btn` + (selected ? "calculator__btn--selected" : "")} {...props}>{props.children}</button>
+
+
+type InputProps = {
+    value: number;
+    className: string;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'className'>
