@@ -1,54 +1,37 @@
 import './App.css'
 import Home from './pages/Home'
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import NFTCard from './pages/NFTpage'
 import Calculator from './pages/Calculator'
+import Layout from './layouts/Layout'
 
 function App() {
   return (
     <Router>
-      <div>
-        <div>
-          <div className="navbar-content">
-            <div><Link to="/">Home</Link></div>
-            <div><Link to="/2nd project">2nd project</Link></div>
-            <div><Link to="calculator" >Calculator</Link></div>
-          </div>
+      <Layout>
+        <Switch>
           <Route exact path="/">
-            <Home />
+            <Home/>
           </Route>
-          <Route path="/2nd project">
-            <NFTCard />
+          <Route path="/2nd-project">
+            <NFTCard/>
           </Route>
           <Route path="/calculator">
-            <Calculator />
+            <Calculator/>
           </Route>
-        </div>
-      </div>
+        </Switch>
+      </Layout>
     </Router>
-  )
+  );
 }
 
 export default App
-
-
-/*
-<Router>
-      <div className='App'>
-        <div className='content'>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/2nd project">
-              <NFTCard />
-            </Route>
-            <Route path="/calculator">
-              <Calculator />
-            </Route>
-          </Switch>
-        </div>
-      </div>
-    </Router>
-    <Router>
-*/
+/*<Router>
+      <Layout>
+        <Switch>
+          <Route path="/" element={<Home />} />
+          <Route path="/2nd-project" element={<NFTCard />} />
+          <Route path="/calculator" element={<Calculator />} />
+        </Switch>
+      </Layout>
+    </Router> */
