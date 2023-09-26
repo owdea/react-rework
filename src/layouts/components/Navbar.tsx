@@ -12,7 +12,10 @@ const Navbar = () => {
           <Link to="/2nd-project">NFT card</Link>
         </li>
         <li>
-            <Link to="calculator">Calculator</Link>
+          <Link to="calculator">Calculator</Link>
+        </li>
+        <li>
+          <Link to="test">Test</Link>
         </li>
       </ul>
     </nav>
