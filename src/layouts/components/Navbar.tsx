@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="calculator" className={styles.link}>Calculator</Link>
         </li>
         <li className={styles.li}>
-          <Link to="test" className={styles.link}>New Calculator</Link>
+          <Link to="test" className={styles.link}>Test NFT</Link>
         </li>
       </ul>
     </nav>
