@@ -1,12 +1,11 @@
-import React from "react";
-import PercentButton from "./components/percentButton.tsx";
+import PercentButton from "./components/PercentButton.tsx";
 import ResetButton from "./components/ResetButton.tsx";
 import CalculatorInput from "./components/CalculatorInput.tsx";
 import CustomPercentInput from "./components/CustomPercentInput.tsx";
 import useCalculatorLogic from "./hooks/useCalculatorLogic.tsx";
 import Dollar from "../../assets/Calculator/icon-dollar.svg";
 import People from "../../assets/Calculator/icon-person.svg";
-import styles from "../../styles/Calculator.module.css"; // Importujeme CSS moduly
+import styles from "../../styles/Calculator.module.css";
 
 const Calculator2 = () => {
   const {
