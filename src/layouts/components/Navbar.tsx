@@ -9,9 +9,6 @@ const Navbar = () => {
           <Link to="/" className={styles.link}>Home</Link>
         </li>
         <li className={styles.li}>
-          <Link to="/2nd-project" className={styles.link}>NFT card</Link>
-        </li>
-        <li className={styles.li}>
           <Link to="calculator" className={styles.link}>Calculator</Link>
         </li>
         <li className={styles.li}>
