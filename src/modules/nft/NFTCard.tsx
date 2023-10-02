@@ -5,7 +5,7 @@ import clock from "../../assets/NFTcard/icon-clock.svg"
 import overlay from "../../assets/NFTcard/icon-view.svg"
 import styles from "../../styles/NFTcard.module.css";
 
-function NFTCard() {
+function NFTCardNew() {
   return (
     <div className={styles.body}>
       <div className={styles.nftBox}> {/*main-card*/}
@@ -35,4 +35,4 @@ function NFTCard() {
   )
 }
 
-export default NFTCard;
+export default NFTCardNew;

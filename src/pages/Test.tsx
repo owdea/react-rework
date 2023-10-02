@@ -1,9 +1,9 @@
-import Calculator2 from "../modules/calculator/Calculator2";
+import NFTCardNew from "../modules/nft/NFTCard";
 
 const Test = () => {
     return (
         <div>
-            <Calculator2/>
+            <NFTCardNew/>
         </div>
     )
 }

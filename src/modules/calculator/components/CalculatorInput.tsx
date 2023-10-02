@@ -1,4 +1,4 @@
-import "../../../styles/Calculator.css"
+import "../../../styles/Calculator-backup.css"
 
 interface CalculatorInputProps {
     name?: string,

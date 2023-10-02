@@ -1,5 +1,5 @@
 //button na zvolení možnosti procent dýška
-import "../../../styles/Calculator.css"
+import "../../../styles/Calculator-backup.css"
 
 interface ButtonProps {
     class?: string,

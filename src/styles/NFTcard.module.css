@@ -39,7 +39,7 @@ p {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
 }
 
-.img-wrapper { /*image-container*/
+.imgWrapper { /*image-container*/
     position: relative;
     margin: 0 auto;
     width: 100%;
@@ -47,7 +47,7 @@ p {
     
 }
 
-.nft-overlay { /*view*/
+.nftOverlay { /*view*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,7 +56,7 @@ p {
     display: none;
 }
 
-.img-wrapper:hover .overlay {
+.imgWrapper:hover .overlay {
     opacity: 1;
     cursor: pointer;
 }
@@ -81,7 +81,7 @@ p {
     background-position: center center;
 }
 
-.img-wrapper:hover .overlay { /**/
+.imgWrapper:hover .overlay { /**/
     opacity: 0.8;
 }
 
@@ -89,7 +89,7 @@ p {
 
 }
 
-.nft-image { /*main-image*/
+.nftImage { /*main-image*/
     display: block;
     max-width: 300px;
     width: 100%;
@@ -116,18 +116,18 @@ p {
     color: hsl(178, 100%, 50%);
 }
 
-.info-row { /*eth-info*/
+.infoRow { /*eth-info*/
     display: flex;
     justify-content: space-between;
     margin: 1rem 0 1.4rem;
 }
-.price-div { /*info*/
+.priceDiv { /*info*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.creation-div { /*info*/
+.creationDiv { /*info*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,14 +142,14 @@ p {
     margin-right: 0.5rem;
 }
 
-.creation-row { /*creator-info*/
+.creationRow { /*creator-info*/
     display: flex;
     border-top: 1px solid var(--line-colour);
     padding-top: 1rem;
     align-items: center;
 }
 
-.user-image { /*avatar*/
+.userImage { /*avatar*/
     border: 1px solid var(--colour-white);
     border-radius: 50%;
     width: 2rem;
