@@ -53,3 +53,8 @@
 .navbar-content a {
   margin: 0 15px; /* Vytvoří mezeru mezi odkazy */
 }
+
+.home {
+  text-align: center;
+  padding-top: 50px;
+}

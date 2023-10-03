@@ -32,7 +32,7 @@ const CalculatorComponent = () => {
   ));
 
   return (
-    <body>
+    <div className={styles.body}>
       <h2>
         spli<span>tter</span>
       </h2>
@@ -108,7 +108,7 @@ const CalculatorComponent = () => {
           />
         </div>
       </main>
-    </body>
+    </div>
   );
 };
 

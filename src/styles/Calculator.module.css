@@ -15,10 +15,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Space Mono', sans-serif;
 }
 
-body{
+.body{
     min-height: 100vh;
     width: 100%;
     font-size: 15px;
@@ -28,6 +27,8 @@ body{
     align-items: center;
     background-color: var(--lightGrayishCyan);
     gap: 4rem;
+    width: 100%;
+    font-family:'Space Mono', sans-serif;
 }
 
 h2{

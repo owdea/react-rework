@@ -16,7 +16,7 @@
     text-align: left;
 }
 
-body {
+.body {
     background-color: var(--bg-main);
     font-family: "Outfit", sans-serif;
     color: var(--colour-blue);

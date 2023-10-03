@@ -1,7 +1,6 @@
-import { useState } from "react";
+import "../index.css"
 
 function Home() {
-    const [color, changeColor] = useState("#12afed") // style={{background: color}}
     return (
         
         <div className="home"> 
