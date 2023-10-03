@@ -8,6 +8,9 @@ const Navbar = () => {
         <li className={styles.li}>
           <Link to="/" className={styles.link}>Home</Link>
         </li>
+        <li>
+          <Link to="NFTCard" className={styles.link}>NFTCard</Link>
+        </li>
         <li className={styles.li}>
           <Link to="calculator" className={styles.link}>Calculator</Link>
         </li>

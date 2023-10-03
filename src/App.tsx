@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Layout from './layouts/Layout'
 import Test from './pages/Test'
 import Calculator2 from './modules/calculator/Calculator2'
+import NFTCard from "./pages/NFTCardPage"
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home/>
+          </Route>
+          <Route path="/NFTCard">
+            <NFTCard/>
           </Route>
           <Route path="/calculator">
             <Calculator2/>
