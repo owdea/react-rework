@@ -1,7 +1,7 @@
-import Calculator2 from "../modules/calculator/Calculator2";
+import CalculatorComponent from "../modules/calculator/CalculatorComponent";
 
 function Calculator() {
-    return <Calculator2/>
+    return <CalculatorComponent/>
 }
 
 export default Calculator;

@@ -14,9 +14,6 @@ const Navbar = () => {
         <li className={styles.li}>
           <Link to="calculator" className={styles.link}>Calculator</Link>
         </li>
-        <li className={styles.li}>
-          <Link to="test" className={styles.link}>Test NFT</Link>
-        </li>
       </ul>
     </nav>
   );
