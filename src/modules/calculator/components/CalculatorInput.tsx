@@ -1,4 +1,4 @@
-import "../../../styles/Calculator-backup.css"
+import styles from "../../../styles/Calculator.module.css"
 
 interface CalculatorInputProps {
     name?: string,
@@ -10,7 +10,7 @@ interface CalculatorInputProps {
 const CalculatorInput = (props: CalculatorInputProps) => {
     return (
     <input
-        className="input"
+        className={styles.calculatorInput}
         type="number"
         name={props.name}
         placeholder={props.placeholder}

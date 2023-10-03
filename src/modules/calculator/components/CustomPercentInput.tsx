@@ -1,4 +1,4 @@
-
+import styles from "../../../styles/Calculator.module.css"
 
 interface CalculatorInputProps {
     name?: string,
@@ -9,7 +9,7 @@ interface CalculatorInputProps {
 const CustomPercentInput = (props:CalculatorInputProps) => {
     return (
         <input
-            className="input custom"
+            className={styles.customInput}
             type="number"
             name="custom percent input"
             placeholder="Custom"

@@ -1,5 +1,5 @@
 //button na zvolení možnosti procent dýška
-import "../../../styles/Calculator-backup.css"
+import styles from "../../../styles/Calculator.module.css"
 
 interface ButtonProps {
     class?: string,
@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const PercentButton = (props: ButtonProps) => {
     return (
-        <button className="button" id={props.id} onClick={props.onClick} disabled={props.disabled}>
+        <button className={styles.button} id={props.id} onClick={props.onClick} disabled={props.disabled}>
             {props.text}
         </button>
     )

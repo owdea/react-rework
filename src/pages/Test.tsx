@@ -1,9 +1,9 @@
-import NFTCardNew from "../modules/nft/NFTCard";
+import CalculatorComponent from "../modules/calculator/CalculatorComponent";
 
 const Test = () => {
     return (
         <div>
-            <h1>sup</h1>
+            <CalculatorComponent/>
         </div>
     )
 }

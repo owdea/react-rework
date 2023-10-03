@@ -51,76 +51,112 @@ main{
     gap: 2rem;
 }
 
-main #main-left p,
-label{
+.mainLeftP {
     color: gray;
     font-size: 15px;
 }
 
-.main-left-p {
-    color: gray;
-    font-size: 15px;
-}
-
-main #main-left,
-main #main-right{
+.mainLeft {
     display: flex;
     flex-direction: column;
-}
-
-main #main-left{
     gap: 2rem;
 }
 
+.mainRight {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    background-color: var(--veryDarkCyan);
+    border-radius: 10px;
+}
 
-main #main-left input{
-    margin-top: 0.3rem;
-    text-align: end;
-    border: transparent;
-    background: var(--veryLIghtGrayishCyan);
-    padding: 0.5rem 0.4rem;
+.calculatorInput {
+    margin-block: 0 40px;
+    padding: 10px;
+    width: 100%;
+    border : none;
+    border-radius: 5px;
+    background-color : hsl(189, 41%, 97%);
+    text-align: right;
     cursor: pointer;
+    font-family: 'Space Mono',sans-serif;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.billImg {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.customInput {
+    border: none;
+    padding: 10px;
+    background-color: var(--veryLIghtGrayishCyan);
+    border-radius: 5px;
+}
+
+.peopleImg {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.mainLeftInput {
+    display: flex;
 }
 
 @media all and (min-width: 401px){
     main #main-left input:focus{
         outline: none;
     }
+    .mainLeftInput:focus{
+        outline: none
+    }
 }
 
-main #main-left input:focus{
+.mainLeftInput:focus{
     border: 1px solid var(--StrongCyan);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
+.mainLeftInput::-webkit-outer-spin-button,
+.mainLeftInput::-webkit-inner-spin-button{
     -webkit-appearance:none;
     margin: 3px;
 }
 
-input[type=number] {
+.mainLeftInput[type=number] {
     -moz-appearance:textfield; /* Firefox */
-}
-
-#bill,
-#number-people
-{
-    display: flex;
-    position: relative;
 }
 
 .bill {
     display: flex;
     position: relative;
 }
-#bill input,
-#number-people input{
-    flex :1;
-    color:  var(--veryDarkCyan);
+
+.numberPeople {
+    display: flex;
+    position: relative;
 }
 
-#bill img,
-#number-people img{
+.mainLeftInput {
+    flex: 1;
+    color: var(--veryDarkCyan);
+}
+
+.billImg {
+    width: 15px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 15px;
+    left: 1rem;
+}
+
+.numberPeopleImg {
     width: 15px;
     aspect-ratio: 1/1;
     position: absolute;
@@ -136,7 +172,7 @@ main #main-left-middle .percentage-choice{
     width: 100%;
 }
 
-.percentage-choice{
+.percentageChoice{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -144,7 +180,7 @@ main #main-left-middle .percentage-choice{
     width: 100%;
 }
 
-main #main-left-middle p{
+.mainLeftMiddleP {
     margin-bottom: 0.5rem;
 }
 
@@ -169,8 +205,7 @@ main #main-left-middle p{
     color: var(--veryDarkCyan);
 }
 
-
-main #main-left-middle input{
+.mainLeftMiddleInput {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -181,12 +216,22 @@ main #main-left #main-left-bottom p{
     font-size: 13px;
 }
 
+.mainLeftBottomP {
+    font-size: 13px;
+}
+
 main #main-left #main-left-bottom #people-information{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.mainLeftBottomPeopleInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*
 main #main-right{
     gap: 3rem;
     padding: 2rem;
@@ -196,6 +241,19 @@ main #main-right{
 
 main #main-right-top,
 main #main-right-middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+*/
+
+.mainRightTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainRightMiddle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -219,6 +277,7 @@ main #main-right-middle{
     color:  var(--StrongCyan);
 }
 
+/*
 #main-right #button-reset{
     cursor: pointer;
     letter-spacing: 0.2rem;
@@ -228,8 +287,9 @@ main #main-right-middle{
     border-radius: 10px;
     margin-top: 2rem;
 }
+*/
 
-.reset-button {
+.resetButton {
     cursor: pointer;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
@@ -260,7 +320,7 @@ main #main-right-middle{
         width: 100%;
     }
 
-    main #main-left-middle .percentage-choice{
+    .percentageChoice{
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
@@ -271,10 +331,22 @@ main #main-right-middle{
         width: 45%;
         padding: 10px;
     }
+
+    .mainLeftInput {
+        width: 45%;
+        padding: 10px;
+    }
 }
 
 @media all and (max-width:300px){
     main #main-left-middle input,
+    .button{
+        width: 100%;
+    }
+}
+
+@media all and (max-width:300px){
+    .mainLeftInput,
     .button{
         width: 100%;
     }
