@@ -1,6 +1,14 @@
-/* Základní styly pro navbar */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Quicksand";
+}
+
+.link {
+  font-family: "Quicksand"
+}
+
 nav {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,6 +17,8 @@ nav {
     text-align: center;
     padding: 10px 0;
     z-index: 1000;
+    padding: 0;
+
   }
   
   ul {

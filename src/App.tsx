@@ -26,12 +26,3 @@ function App() {
 }
 
 export default App
-/*<Router>
-      <Layout>
-        <Switch>
-          <Route path="/" element={<Home />} />
-          <Route path="/2nd-project" element={<NFTCard />} />
-          <Route path="/calculator" element={<Calculator />} />
-        </Switch>
-      </Layout>
-    </Router> */
