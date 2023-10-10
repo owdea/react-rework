@@ -17,6 +17,12 @@
   box-sizing: border-box;
 }
 
+.p {
+  font-size: 14px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
 .body {
   width: 100%;
   font-size: 15px;
@@ -95,7 +101,6 @@ main {
 
 .customInput {
   border: none;
-  padding: 10px;
   background-color: var(--veryLIghtGrayishCyan);
   border-radius: 5px;
 }
@@ -106,46 +111,17 @@ main {
   left: 15px;
 }
 
-.mainLeftInput {
-  display: flex;
-}
-
-@media all and (min-width: 401px) {
-  main #main-left input:focus {
-    outline: none;
-  }
-  .mainLeftInput:focus {
-    outline: none;
-  }
-}
-
-.mainLeftInput:focus {
-  border: 1px solid var(--StrongCyan);
-}
-
-.mainLeftInput::-webkit-outer-spin-button,
-.mainLeftInput::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 3px;
-}
-
-.mainLeftInput[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
-}
-
 .bill {
   display: flex;
   position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
 }
 
 .numberPeople {
   display: flex;
   position: relative;
-}
-
-.mainLeftInput {
-  flex: 1;
-  color: var(--veryDarkCyan);
 }
 
 .billImg {
@@ -156,32 +132,12 @@ main {
   left: 1rem;
 }
 
-.numberPeopleImg {
-  width: 15px;
-  aspect-ratio: 1/1;
-  position: absolute;
-  top: 15px;
-  left: 1rem;
-}
-
-main #main-left-middle .percentage-choice {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-  width: 100%;
-}
-
 .percentageChoice {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
   width: 100%;
-}
-
-.mainLeftMiddleP {
-  margin-bottom: 0.5rem;
 }
 
 .button {
@@ -194,6 +150,11 @@ main #main-left-middle .percentage-choice {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: var(--StrongCyan);
+  color: var(--veryDarkCyan);
+}
+
 .buttonActive {
   background-color: var(--StrongCyan);
   color: var(--veryDarkCyan);
@@ -202,32 +163,6 @@ main #main-left-middle .percentage-choice {
   width: 100%;
   border-radius: 8px;
   cursor: pointer;
-}
-
-.button:hover {
-  background-color: var(--StrongCyan);
-  color: var(--veryDarkCyan);
-}
-
-.mainLeftMiddleInput {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-main #main-left #main-left-bottom p {
-  font-size: 13px;
-}
-
-.mainLeftBottomP {
-  font-size: 13px;
-}
-
-main #main-left #main-left-bottom #people-information {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .mainLeftBottomPeopleInformation {
@@ -248,17 +183,18 @@ main #main-left #main-left-bottom #people-information {
   justify-content: space-between;
 }
 
-.tip-person {
+.tipPerson {
   font-size: 13px;
   color: var(--White);
 }
+
 .person {
   color: var(--White);
   font-size: 10px;
   opacity: 0.7;
 }
 
-.tip-total {
+.tipTotal {
   display: flex;
   align-items: center;
   position: relative;
@@ -274,11 +210,6 @@ main #main-left #main-left-bottom #people-information {
   border: none;
   border-radius: 10px;
   margin-top: 2rem;
-}
-
-.has-reset-activated {
-  background-color: var(--StrongCyan);
-  color: var(--veryDarkCyan);
 }
 
 @media all and (max-width: 800px) {
@@ -300,22 +231,9 @@ main #main-left #main-left-bottom #people-information {
     gap: 1.5rem;
   }
 
-  main #main-left-middle input,
-  .button {
-    width: 45%;
-    padding: 10px;
-  }
-
   .mainLeftInput {
     width: 45%;
     padding: 10px;
-  }
-}
-
-@media all and (max-width: 300px) {
-  main #main-left-middle input,
-  .button {
-    width: 100%;
   }
 }
 

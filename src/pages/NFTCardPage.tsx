@@ -1,6 +1,6 @@
 import NFTCardComponent from "../modules/nft/NFTCard";
 
-const NFTCard = () => {
+function NFTCard() {
     const styles: React.CSSProperties = {
         flexGrow: 1,
         display: "flex",

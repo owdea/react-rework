@@ -59,9 +59,14 @@ const useCalculatorLogic = () => {
         return !bill && !percent && !numberOfPeople && !customInput
     }
 
-    function handleClick (percent) {
+    function handleClick(percent) {
         setPercent(percent);
-        setActiveButton(percent);
+        if (percent === activeButton) {
+            setActiveButton(0);
+            setPercent(0);
+        } else {
+            setActiveButton(percent)
+        }
         setCustomInput("Custom")
     }
 

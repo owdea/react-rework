@@ -87,9 +87,6 @@ p {
   opacity: 0.8;
 }
 
-.text-container {
-}
-
 .nftImage {
   display: block;
   max-width: 300px;
@@ -104,6 +101,7 @@ p {
   font-size: 1.4rem;
   font-weight: 400;
 }
+
 .description {
   font-size: 1.1rem;
   letter-spacing: 0.015em;
@@ -120,6 +118,7 @@ p {
   justify-content: space-between;
   margin: 1rem 0 1.4rem;
 }
+
 .priceDiv {
   display: flex;
   justify-content: center;

@@ -1,5 +1,4 @@
 
-
 interface ButtonProps {
     class: string,
     id?: string,

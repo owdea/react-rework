@@ -19,10 +19,8 @@ const CalculatorComponent = () => {
     totalPerPerson,
     resetValues,
     disableResetButton,
-    setPercent,
     buttonsData
   } = useCalculatorLogic();
-
 
   const buttons = buttonsData.map((button, index) => (
     <PercentButton
@@ -34,10 +32,6 @@ const CalculatorComponent = () => {
     />
   ));
 
-  function handleClick () {
-    setPercent(1)
-  }
-
   return (
     <div className={styles.body}>
       <h2>
@@ -47,7 +41,7 @@ const CalculatorComponent = () => {
       <main>
         <div id="main-left" className={styles.mainLeft}>
           <div id="main-left-top" className={styles.mainLeftTop}>
-            <label htmlFor="bill">Bill</label>
+            <label htmlFor="bill" className={styles.p}>Bill</label>
             <div id="bill" className={styles.bill}>
               <img src={Dollar} alt="icon dollar" className={styles.billImg} />
               <CalculatorInput
@@ -73,7 +67,6 @@ const CalculatorComponent = () => {
           <div id="main-left-bottom" className={styles.mainLeftBottom}>
             <div id="people-information" className={styles.mainLeftBottomPeopleInformation}>
               <p>Number of People</p>
-              <p className={styles["if-zero-number"]}></p>
             </div>
             <div id="number-people" className={styles.bill}>
               <img src={People} alt="icon person" className={styles.peopleImg} />
@@ -89,22 +82,22 @@ const CalculatorComponent = () => {
         <div id="main-right" className={styles.mainRight}>
           <div id="main-right-top" className={styles.mainRightTop}>
             <div>
-              <p className={styles["tip-person"]}>Tip Amount</p>
-              <p className={styles["person"]}>/ person</p>
+              <p className={styles.tipPerson}>Tip Amount</p>
+              <p className={styles.person}>/ person</p>
             </div>
-            <div className={styles["tip-total"]}>
-              <div className={styles["dollar"]}></div>
+            <div className={styles.tipTotal}>
+              <div className={styles.dollar}></div>
               <span>$</span>
               <span id="result-tip">{tipPerPerson}</span>
             </div>
           </div>
           <div id="main-right-middle" className={styles.mainRightMiddle}>
             <div>
-              <p className={styles["tip-person"]}>Total</p>
-              <p className={styles["person"]}>/ person</p>
+              <p className={styles.tipPerson}>Total</p>
+              <p className={styles.person}>/ person</p>
             </div>
-            <div className={styles["tip-total"]}>
-              <div className={styles["dollar"]}></div>
+            <div className={styles.tipTotal}>
+              <div className={styles.dollar}></div>
               <span>$</span>
               <span id="result-total">{totalPerPerson}</span>
             </div>
