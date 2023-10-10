@@ -18,9 +18,17 @@ const CalculatorComponent = () => {
     tipPerPerson,
     totalPerPerson,
     resetValues,
-    buttonsData,
     disableResetButton,
+    setPercent
   } = useCalculatorLogic();
+
+  const buttonsData = [
+    { text: "5%", handler: () => setPercent(0.05) },
+    { text: "10%", handler: () => setPercent(0.1) },
+    { text: "15%", handler: () => setPercent(0.15) },
+    { text: "25%", handler: () => setPercent(0.25) },
+    { text: "50%", handler: () => setPercent(0.5) },
+];
 
   const buttons = buttonsData.map((button, index) => (
     <PercentButton
@@ -42,7 +50,7 @@ const CalculatorComponent = () => {
           <div id="main-left-top" className={styles.mainLeftTop}>
             <label htmlFor="bill">Bill</label>
             <div id="bill" className={styles.bill}>
-              <img src={Dollar} alt="icon dollar" className={styles.billImg}/>
+              <img src={Dollar} alt="icon dollar" className={styles.billImg} />
               <CalculatorInput
                 name="bill"
                 placeholder="0"
@@ -69,7 +77,7 @@ const CalculatorComponent = () => {
               <p className={styles["if-zero-number"]}></p>
             </div>
             <div id="number-people" className={styles.bill}>
-              <img src={People} alt="icon person" className={styles.peopleImg}/>
+              <img src={People} alt="icon person" className={styles.peopleImg} />
               <CalculatorInput
                 placeholder="0"
                 value={numberOfPeople}

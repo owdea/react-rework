@@ -1,4 +1,3 @@
-//button na zvolení možnosti procent dýška
 import styles from "../../../styles/Calculator.module.css"
 
 interface ButtonProps {

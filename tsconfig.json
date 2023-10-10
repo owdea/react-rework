@@ -21,10 +21,9 @@
     "noFallthroughCasesInSwitch": true,
 
     "noImplicitAny": false
-
   },
   "formatOptions": {
-    "insertSpaceAfterCommaDelimiter": true,
+    "insertSpaceAfterCommaDelimiter": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

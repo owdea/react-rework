@@ -1,16 +1,16 @@
-import NFTCardNew from "../modules/nft/NFTCard";
+import NFTCardComponent from "../modules/nft/NFTCard";
 
-const Test = () => {
-    const styles: React.CSSProperties  = {
+const NFTCard = () => {
+    const styles: React.CSSProperties = {
         flexGrow: 1,
         display: "flex",
         justifyContent: "center",
     }
     return (
         <div style={styles}>
-            <NFTCardNew/>
+            <NFTCardComponent />
         </div>
     )
 }
 
-export default Test;
+export default NFTCard;

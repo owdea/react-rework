@@ -6,7 +6,7 @@ interface CalculatorInputProps {
     onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
-const CustomPercentInput = (props:CalculatorInputProps) => {
+const CustomPercentInput = (props: CalculatorInputProps) => {
     return (
         <input
             className={styles.customInput}

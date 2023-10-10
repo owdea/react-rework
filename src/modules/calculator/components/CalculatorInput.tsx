@@ -9,16 +9,16 @@ interface CalculatorInputProps {
 
 const CalculatorInput = (props: CalculatorInputProps) => {
     return (
-    <input
-        className={styles.calculatorInput}
-        type="number"
-        name={props.name}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={props.onChange}
-    >
-    
-    </input>
+        <input
+            className={styles.calculatorInput}
+            type="number"
+            name={props.name}
+            placeholder={props.placeholder}
+            value={props.value}
+            onChange={props.onChange}
+        >
+
+        </input>
     )
 }
 
