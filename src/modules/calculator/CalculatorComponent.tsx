@@ -19,16 +19,10 @@ const CalculatorComponent = () => {
     totalPerPerson,
     resetValues,
     disableResetButton,
-    setPercent
+    setPercent,
+    buttonsData
   } = useCalculatorLogic();
 
-  const buttonsData = [
-    { text: "5%", handler: () => setPercent(0.05) },
-    { text: "10%", handler: () => setPercent(0.1) },
-    { text: "15%", handler: () => setPercent(0.15) },
-    { text: "25%", handler: () => setPercent(0.25) },
-    { text: "50%", handler: () => setPercent(0.5) },
-];
 
   const buttons = buttonsData.map((button, index) => (
     <PercentButton
@@ -36,8 +30,13 @@ const CalculatorComponent = () => {
       text={button.text}
       onClick={button.handler}
       disabled={false}
+      class={button.isActive ? styles.buttonActive : styles.button}
     />
   ));
+
+  function handleClick () {
+    setPercent(1)
+  }
 
   return (
     <div className={styles.body}>

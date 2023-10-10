@@ -4,6 +4,7 @@ const useCalculatorLogic = () => {
     const [bill, setBill] = useState(0);
     const [numberOfPeople, setNumberOfPeople] = useState(0);
     const [customInput, setCustomInput] = useState("Custom");
+    const [activeButton, setActiveButton] = useState(0);
 
     const onBillChangeHandler = (event) => {
         //zajištění změny hodnoty bill po inputu
@@ -46,23 +47,32 @@ const useCalculatorLogic = () => {
         setBill(0);
         setNumberOfPeople(0);
         setCustomInput("Custom");
+        setActiveButton(0);
     };
 
     const customTipChangeHandler = (event) => {
         setCustomInput(event.target.valueAsNumber);
+        setActiveButton(0);
     };
 
     const disableResetButton = () => {
         return !bill && !percent && !numberOfPeople && !customInput
     }
 
+    function handleClick (percent) {
+        setPercent(percent);
+        setActiveButton(percent);
+        setCustomInput("Custom")
+    }
+
     const buttonsData = [
-        { text: "5%", handler: () => setPercent(0.05) },
-        { text: "10%", handler: () => setPercent(0.1) },
-        { text: "15%", handler: () => setPercent(0.15) },
-        { text: "25%", handler: () => setPercent(0.25) },
-        { text: "50%", handler: () => setPercent(0.5) },
+        { text: "5%", handler: () => handleClick(0.05), isActive: activeButton === 0.05 },
+        { text: "10%", handler: () => handleClick(0.1), isActive: activeButton === 0.1 },
+        { text: "15%", handler: () => handleClick(0.15), isActive: activeButton === 0.15 },
+        { text: "25%", handler: () => handleClick(0.25), isActive: activeButton === 0.25 },
+        { text: "50%", handler: () => handleClick(0.5), isActive: activeButton === 0.5 },
     ];
+
     return {
         percent,
         setPercent,

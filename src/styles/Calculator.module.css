@@ -194,12 +194,17 @@ main #main-left-middle .percentage-choice {
   cursor: pointer;
 }
 
-.button:hover {
+.buttonActive {
   background-color: var(--StrongCyan);
   color: var(--veryDarkCyan);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.button.active {
+.button:hover {
   background-color: var(--StrongCyan);
   color: var(--veryDarkCyan);
 }

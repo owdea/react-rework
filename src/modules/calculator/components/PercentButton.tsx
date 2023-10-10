@@ -1,7 +1,7 @@
-import styles from "../../../styles/Calculator.module.css"
+
 
 interface ButtonProps {
-    class?: string,
+    class: string,
     id?: string,
     onClick?: () => void,
     text: string,
@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const PercentButton = (props: ButtonProps) => {
     return (
-        <button className={styles.button} id={props.id} onClick={props.onClick} disabled={props.disabled}>
+        <button className={props.class} id={props.id} onClick={props.onClick} disabled={props.disabled}>
             {props.text}
         </button>
     )
