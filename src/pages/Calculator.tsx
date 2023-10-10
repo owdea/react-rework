@@ -1,7 +1,14 @@
 import CalculatorComponent from "../modules/calculator/CalculatorComponent";
 
 function Calculator() {
-    return <CalculatorComponent/>
+    const styles: React.CSSProperties  = {
+        flexGrow: 1,
+        display: "flex"
+    }
+    return (
+    <div style={styles}>
+        <CalculatorComponent/>
+    </div>)
 }
 
 export default Calculator;

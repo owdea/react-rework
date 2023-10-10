@@ -6,10 +6,11 @@ import overlay from "../../assets/NFTcard/icon-view.svg"
 import styles from "../../styles/NFTcard.module.css";
 
 function NFTCardNew() {
+  
   return (
     <div className={styles.body}>
-      <div className={styles.nftBox}> {/*main-card*/}
-        <div className={styles.imgWrapper}> {/*image-container*/}
+      <div className={styles.nftBox}>
+        <div className={styles.imgWrapper}>
           <img className={styles.nftImage} src={equilibrium} alt="Equilibrium"/>
           <div className={styles.overlay}></div>
           <img className={styles.nftOverlay} src={overlay} alt="view-icon" />

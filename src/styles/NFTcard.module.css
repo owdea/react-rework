@@ -22,6 +22,10 @@
     color: var(--colour-blue);
     font-weight: 300;
     line-height: 1.6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -33,7 +37,6 @@ p {
 .nftBox {
     background-color: var(--bg-card);
     width: min(87.5%, 22rem);
-    margin: 0 auto;
     border-radius: 15px;
     padding: 1.5rem 1.6rem 2rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
