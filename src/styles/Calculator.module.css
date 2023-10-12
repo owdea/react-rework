@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLIghtGrayishCyan: hsl(189, 41%, 97%);
+  --StrongCyan: hsl(172, 67%, 45%);
+  --White: hsl(0, 0%, 100%);
+  --fontSize: 24px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.p {
+  font-size: 14px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+.body {
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGrayishCyan);
+  gap: 4rem;
+  width: 100%;
+  font-family: "Space Mono", sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--veryDarkCyan);
+  font-size: var(--fontSize);
+}
+
+h2 span {
+  display: block;
+}
+
+main {
+  background-color: var(--White);
+  border-radius: 20px;
+  max-width: 1000px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mainLeftP {
+  color: gray;
+  font-size: 15px;
+}
+
+.mainLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mainRight {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: var(--veryDarkCyan);
+  border-radius: 10px;
+}
+
+.calculatorInput {
+  margin-block: 0 40px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  cursor: pointer;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.billImg {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.customInput {
+  border: none;
+  background-color: var(--veryLIghtGrayishCyan);
+  border-radius: 5px;
+}
+
+.peopleImg {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.bill {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+.numberPeople {
+  display: flex;
+  position: relative;
+}
+
+.billImg {
+  width: 15px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 15px;
+  left: 1rem;
+}
+
+.percentageChoice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--veryDarkCyan);
+  color: var(--White);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--StrongCyan);
+  color: var(--veryDarkCyan);
+}
+
+.buttonActive {
+  background-color: var(--StrongCyan);
+  color: var(--veryDarkCyan);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mainLeftBottomPeopleInformation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainRightTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainRightMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tipPerson {
+  font-size: 13px;
+  color: var(--White);
+}
+
+.person {
+  color: var(--White);
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.tipTotal {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 30px;
+  color: var(--StrongCyan);
+}
+
+.resetButton {
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+@media all and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 400px) {
+  #main-left,
+  #main-right {
+    width: 100%;
+  }
+
+  .percentageChoice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .mainLeftInput {
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .mainLeftInput,
+  .button {
+    width: 100%;
+  }
+}

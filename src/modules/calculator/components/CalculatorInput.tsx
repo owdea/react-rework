@@ -1,24 +1,25 @@
-interface InputProps {
-    class: string,
-    type: string,
+import styles from "../../../styles/Calculator.module.css"
+
+interface CalculatorInputProps {
     name?: string,
     placeholder: string,
     value: number | string,
     onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
-function Input(props: InputProps) {
+const CalculatorInput = (props: CalculatorInputProps) => {
     return (
-        <input 
-            className={props.class} 
-            type={props.type}
+        <input
+            className={styles.calculatorInput}
+            type="number"
             name={props.name}
             placeholder={props.placeholder}
             value={props.value}
             onChange={props.onChange}
-            >
-            </input>
+        >
+
+        </input>
     )
 }
 
-export default Input;
+export default CalculatorInput;
